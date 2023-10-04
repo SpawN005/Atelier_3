@@ -1,0 +1,10 @@
+<div *ngIf="params.active === 'true'; else elseBlock">
+  <p>Facture N: {{ params.id }}</p>
+  <p>Montant: {{ QueryParams.montantFacture }}</p>
+  <p>Remise: {{ QueryParams.montantRemise }}</p>
+  <p>Date: {{ QueryParams.dateFacture }}</p>
+</div>
+<ng-template #elseBlock
+  >Impossible de visualiser les détails de la facture
+</ng-template>
+<button routerLink="/mainInvoice">Retour</button>
